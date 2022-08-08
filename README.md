@@ -71,7 +71,7 @@ As subclasses **representarão tipos de dados diferentes das suas séries de dad
 
 Por exemplo, no caso de dados de clima, uma classe será para dados de temperatura e outra para dados de umidade.
 
-Cada subclasse deve sobrescrever o método `getIdentificação` para retornar que tipo de dado ela guarda e acrescentar também a localidade.
+Cada subclasse deve sobrescrever o método `obterIdentificacaoSerie` para retornar que tipo de dado ela guarda e acrescentar também a localidade.
 Exemplo: "Temperaturas em Lavras".
 
 Obs. 1: a classe não precisa ter nenhum atributo.
