@@ -6,7 +6,7 @@ Este projeto é um código inicial de um exercício usado para praticar os conce
 
 As atividades de hoje têm por objetivo exemplificar a importância do uso dos conceitos de **Classes Abstratas e Interfaces**.
 
-Este projeto tem um pasta (pacote) chamada `series` com duas interfaces e uma classe. 
+Este projeto tem um pasta (pacote) chamada `series` com duas interfaces e uma classe.
 Uma Série de Dados é um conjunto de dados que tem um dia inicial, um dia final e um valor inteiro correspondente para cada dia.
 Séries de dados podem ser, por exemplo:
 
@@ -29,7 +29,7 @@ Ao escolher valide com o professor, pois a ideia é cada aluno tenha temas difer
 
 Você deve escrever abaixo quais são as séries de dados que você vai tratar e, em seguida, fazer commit com essa alteração.
 
-... digite sua resposta aqui ...
+> ... digite aqui sua resposta ...
 
 ## Passo 2 - Criação do Pacote
 
@@ -49,14 +49,11 @@ Obs: para facilitar o entendimento, os passos seguintes citarão séries de dado
 Crie, dentro do pacote do Passo 2, **uma classe para representar as suas séries de dados**.
 
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
-A ideia é que ela tenha depois duas subclasses para representar os dois tipos diferentes de dados de clima (temperatura e umidade relativa do ar, por exemplo).
+A ideia é que ela seja usada depois para criar dois objetos para representar os dois tipos diferentes de dados de clima (temperatura e umidade relativa do ar, por exemplo).
 
-A classe deverá implementar a interface fornecida `SeriesDados`.
-Ela deverá sobrescrever todos os métodos da interface, exceto o método `obterIdentificacaoSerie` (que será sobrescrito depois nas subclasses).
-A classe deverá ter um atributo `localidade` para identificar a que local os dados se referem.
-No caso dos dados de clima, por exemplo, poderia ser uma cidade.
+A classe deverá implementar a interface fornecida `SeriesDados`, sobrescrevendo todos os seus métodos.
 
-O construtor da classe deverá receber por parâmetro a localidade, o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série, o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado dia. (Obs.: lembre-se de tratar o caso do método seja chamado para um dia fora do intervalo de dias definido para a série no construtor).
 
@@ -64,36 +61,17 @@ Obs.: lembre-se que como a classe `SerieDados` está em outro pacote, você prec
 
 Ao terminar, faça um commit.
 
-## Passo 4 - Subclasses de séries diárias
+## Passo 4 - Classe de controle
 
-Crie, dentro do pacote do Passo 2, **duas subclasses** para a classe que você criou no passo anterior.
-As subclasses **representarão tipos de dados diferentes das suas séries de dados**.
+Crie, dentro do pacote do Passo 2, **uma classe de controle** que tenha dois atributos da classe de Séries de Dados que você criou no passo anterior.
 
-Por exemplo, no caso de dados de clima, uma classe será para dados de temperatura e outra para dados de umidade.
-
-Cada subclasse deve sobrescrever o método `obterIdentificacaoSerie` para retornar que tipo de dado ela guarda e acrescentar também a localidade.
-Exemplo: "Temperaturas em Lavras".
-
-Obs. 1: a classe não precisa ter nenhum atributo.
-
-Obs. 2: essas classes não fazem quase nada, mas estão sendo pedidas por motivos didáticos.
-
-Como de costume, ao terminar, faça um novo commit.
-
-## Passo 5 - Classe de controle
-
-Crie, dentro do pacote do Passo 2, **uma classe de controle que implemente a interface fornecida `ControladorSeries`**.
-
-A classe deve ter uma lista com pelo menos dois objetos, um de cada subclasse que você criou no passo anterior.
-Ela deve implementar o método da interface `ControladorSeries`.
-
-Por fim, no construtor, ela deverá criar os dados das suas séries diretamente no código (*hard coded*).
+Na implementação da classe do construtor, crie os dados das suas séries diretamente no código (*hard coded*).
 
 Obs: *num programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo. Mas vamos fazer “na mão” para não gastar muito tempo.*
 
 Faça o commit de suas alterações.
 
-## Passo 6 - Classe principal
+## Passo 5 - Classe principal
 
 **Altere o código do método `executar` classe `Principal`** que foi fornecida neste projeto.
 
@@ -101,7 +79,7 @@ Você deve instanciar a classe controladora, criada no passo anterior, e obter a
 
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
-```
+```text
 Dados da Serie Temperaturas em Lavras
 Dia 1: 23
 Dia 2: 25
@@ -114,11 +92,11 @@ Dia 2: 82
 
 Teste o seu programa e, estando tudo certo, faça um novo commit.
 
-## Passo 7 - Visualização dos dados
+## Passo 6 - Visualização dos dados
 
 Altere o método `executar` da classe `Principal`, **criando um objeto da classe `VisualizadorSeries`** passando a lista de séries como parâmetro.
 
-Em seguida, **chame o método `exibir`** do objeto criado. 
+Em seguida, **chame o método `exibir`** do objeto criado.
 
 Teste seu programa e veja o que acontece.
 
@@ -127,25 +105,25 @@ Elas se encontram na pasta `lib` desse projeto.
 
 Advinha o que precisa fazer agora? Isso mesmo, um novo commit.
 
-## Passo 8 - Reflexão sobre a atividade
+## Passo 7 - Reflexão sobre a atividade
 
 Você chegou a **refletir sobre o que acabamos de fazer**?
 Se não, vamos pensar nisso agora respondendo às perguntas abaixo.
 
 1. Quando a classe de `VisualizadorSeries` foi implementada, quem a criou conhecia algum código que você desenvolveu?
 
-... digite aqui sua resposta ...
+> ... digite aqui sua resposta ...
 
 2. Como então a classe `VisualizadorSeries` conseguiu mostrar os dados das suas séries mesmo sem conhecer a sua implementação?
 
-... digite aqui sua resposta ...
+> ... digite aqui sua resposta ...
 
 3. O que o polimorfismo tem a ver com o que foi feito?
 
-... digite aqui sua resposta ...
+> ... digite aqui sua resposta ...
 
 4. Para que então servem as interfaces (como tipo de dado)?
 
-... digite aqui sua resposta ...
+> ... digite aqui sua resposta ...
 
 Ao terminar, faça um novo commit e sincronize suas alterações com o GitHub Classroom.
