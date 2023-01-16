@@ -25,9 +25,8 @@ Ao escolher valide com o professor, pois a ideia é cada aluno tenha temas difer
 2. Dados de acidentes: fatais e não fatais
 3. Dados da balança comercial de um país: importações e exportações.
 4. Dados de ações de duas empresas: valores da ação da Vale e da Petrobrás.
-5. Dados de COVID de uma cidade: número de casos e número de óbitos.
 
-Você deve escrever abaixo quais são as séries de dados que você vai tratar e, em seguida, fazer commit com essa alteração.
+Neste passo, você deve escrever abaixo quais são as séries de dados que você vai tratar e, em seguida, fazer commit com essa alteração.
 
 > ... digite aqui sua resposta ...
 
