@@ -52,7 +52,7 @@ A ideia é que ela seja usada depois para criar dois objetos para representar os
 
 A classe deverá implementar a interface fornecida `SeriesDados`, sobrescrevendo todos os seus métodos.
 
-O construtor da classe deverá receber por parâmetro a identificação da série, o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado dia.
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada dia).
