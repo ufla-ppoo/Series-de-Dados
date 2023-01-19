@@ -67,12 +67,16 @@ Ao terminar, faça um commit.
 Crie, dentro do pacote do Passo 2, **uma classe de controle** que tenha dois atributos da classe de Séries de Dados que você criou no passo anterior.
 
 Na implementação da classe do construtor, crie os dados das suas séries diretamente no código (*hard coded*).
+Lembre-se que, além de criar os objetos das séries, é necessário adicionar os dados de cada série.
 
-Obs: *num programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo. Mas vamos fazer “na mão” para não gastar muito tempo.*
+> Obs: em um programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo.
+> Mas vamos fazer “na mão” para não gastar muito tempo.
 
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
-- Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe `Controle`, o que feriria o encapsulamento.
-- Dica 2: se usar a lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
+
+> Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe `Controle`, o que feriria o encapsulamento.
+
+> Dica 2: se usar a lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
 
 Faça o commit de suas alterações.
 
