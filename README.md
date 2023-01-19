@@ -70,6 +70,10 @@ Na implementação da classe do construtor, crie os dados das suas séries diret
 
 Obs: *num programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo. Mas vamos fazer “na mão” para não gastar muito tempo.*
 
+Por fim, crie um método que retorna uma lista com as duas séries criadas.
+- Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe `Controle`, o que feriria o encapsulamento.
+- Dica 2: se usar a lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
+
 Faça o commit de suas alterações.
 
 ## Passo 5 - Classe principal
