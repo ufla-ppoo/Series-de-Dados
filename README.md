@@ -90,12 +90,12 @@ Para testar se está tudo certo, implemente um loop que mostre os dados das sér
 
 ```text
 Dados da Serie Temperaturas em Lavras
-Dia 1: 23
-Dia 2: 25
+Dia 5: 23
+Dia 6: 25
 ...
 Dados da Serie Umidade relativa do ar em Lavras
-Dia 1: 76
-Dia 2: 82
+Dia 5: 76
+Dia 6: 82
 ...
 ```
 
