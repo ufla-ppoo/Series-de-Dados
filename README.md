@@ -54,7 +54,9 @@ A classe deverá implementar a interface fornecida `SeriesDados`, sobrescrevendo
 
 O construtor da classe deverá receber por parâmetro a identificação da série, o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
 
-Por fim, a classe deverá ter um método para adicionar um dado para um determinado dia. (Obs.: lembre-se de tratar o caso do método seja chamado para um dia fora do intervalo de dias definido para a série no construtor).
+Por fim, a classe deverá ter um método para adicionar um dado para um determinado dia.
+- Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada dia).
+- Lembre-se também de tratar o caso do método seja chamado para um dia fora do intervalo de dias definido para a série no construtor.
 
 Obs.: lembre-se que como a classe `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
 
