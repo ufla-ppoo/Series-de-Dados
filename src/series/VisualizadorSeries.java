@@ -42,7 +42,7 @@ public class VisualizadorSeries {
         // cria o gráfico que contém os dados da série
         JFreeChart graficoLinha = ChartFactory.createBarChart(
                 null,     // Título do gráfico
-                "Dia",    // Nome do eixo X
+                "Intervalo",    // Nome do eixo X
                 "Valor",  // Nome do eixo Y
                 criarDataset(series),     // método que cria os dados do gráfico
                 PlotOrientation.VERTICAL, // Orientação do gráfico
@@ -78,12 +78,12 @@ public class VisualizadorSeries {
        // Para cada série de dados
        for (SerieDados serie : series) {
            // para cada dia do gráfico adiciona um valor no conjunto de dados       
-           for(int dia = serie.obterDiaInicial(); dia <= serie.obterDiaFinal(); dia++) {      
+           for(int valor = serie.obterInicioPeriodo(); valor <= serie.obterFimPeriodo(); valor++) {      
          
                dataset.addValue(
-                   serie.obterDado(dia), 
+                   serie.obterDado(valor), 
                    serie.obterIdentificacaoSerie(),
-                   Integer.toString(dia));
+                   Integer.toString(valor));
            }
         }
       
