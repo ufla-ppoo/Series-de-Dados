@@ -6,14 +6,14 @@ Este projeto é um código inicial de um exercício usado para praticar os conce
 
 As atividades de hoje têm por objetivo exemplificar a importância do uso dos conceitos de **Classes Abstratas e Interfaces**.
 
-Este projeto tem um pasta (pacote) chamada `series` com duas interfaces e uma classe.
-Uma Série de Dados é um conjunto de dados que tem um dia inicial, um dia final e um valor inteiro correspondente para cada dia.
+Este projeto tem um pasta (pacote) chamada `series` com duas interfaces, uma classe e um enumerável.
+Uma série de dados tem uma periodicidade, um intervalo (dado por um período inicial e um final) e valores inteiros (dados) correspondentes a cada período.
 Séries de dados podem ser, por exemplo:
 
-- Das temperaturas de uma cidade, do dia 1 ao dia 5.
-- Das vendas de uma loja, do dia 4 ao dia 10.
+- Das temperaturas de uma cidade, do dia 1 ao dia 5, com periodicidade diária.
+- Das vendas de uma loja, do mês 4 ao mês 10, com periodicidade mensal.
 
-As interfaces fornecidas são genéricas e servem para qualquer tipo de série de dados diários.
+As interfaces fornecidas são genéricas e servem para qualquer tipo de série de dados com um determinado período.
 A ideia é que você trate algum tipo de série de dados usando essas interfaces.
 
 Neste passo você deve definir quais séries de dados vai tratar.
@@ -52,11 +52,11 @@ A ideia é que ela seja usada depois para criar dois objetos para representar os
 
 A classe deverá implementar a interface fornecida `SeriesDados`, sobrescrevendo todos os seus métodos.
 
-O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o dia inicial e o dia final e deve criar uma estrutura de dados que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados que guardará os dados da série.
 
-Por fim, a classe deverá ter um método para adicionar um dado para um determinado dia.
-- Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada dia).
-- Lembre-se também de tratar o caso do método seja chamado para um dia fora do intervalo de dias definido para a série no construtor (neste método e também no de obter dado).
+Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
+- Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
+- Lembre-se também de tratar o caso do método seja chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no de obter dado).
 
 Obs.: lembre-se que como a classe `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
 
@@ -89,13 +89,13 @@ Você deve instanciar a classe controladora, criada no passo anterior, e obter a
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
 ```text
-Dados da Serie Temperaturas em Lavras
+Dados da Serie Temperaturas em Lavras (DIARIA)
 Dia 5: 23
 Dia 6: 25
 ...
-Dados da Serie Umidade relativa do ar em Lavras
-Dia 5: 76
-Dia 6: 82
+Dados da Serie Umidade relativa do ar em Lavras (MENSAL)
+Mês 5: 76
+Mês 6: 82
 ...
 ```
 

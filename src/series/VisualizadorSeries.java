@@ -78,12 +78,12 @@ public class VisualizadorSeries {
        // Para cada série de dados
        for (SerieDados serie : series) {
            // para cada dia do gráfico adiciona um valor no conjunto de dados       
-           for(int valor = serie.obterInicioPeriodo(); valor <= serie.obterFimPeriodo(); valor++) {      
+           for(int periodo = serie.obterInicioPeriodo(); periodo <= serie.obterFimPeriodo(); periodo++) {      
          
                dataset.addValue(
-                   serie.obterDado(valor), 
+                   serie.obterDado(periodo), 
                    serie.obterIdentificacaoSerie(),
-                   Integer.toString(valor));
+                   Integer.toString(periodo));
            }
         }
       

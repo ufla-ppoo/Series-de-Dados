@@ -2,14 +2,15 @@ package series;
 
 /**
  * Enumerável que representa a periodicidade
- * de um intervalo de valores
+ * de um determinado período
  */
 public enum Periodicidade {
     
-    Hora,
-    Dia,
-    Semana,
-    Ano,
-    Inteiro
+    HORARIA,
+    DIARIA,
+    SEMANAL,
+    ANUAL,
+    MENSAL,
+    POR_EVENTO
 
 }
