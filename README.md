@@ -13,22 +13,24 @@ Séries de dados podem ser, por exemplo:
 - Das temperaturas de uma cidade, do dia 1 ao dia 5, com periodicidade diária.
 - Das vendas de uma loja, do mês 4 ao mês 10, com periodicidade mensal.
 
-As interfaces fornecidas são genéricas e servem para qualquer tipo de série de dados com um determinado período.
-A ideia é que você trate algum tipo de série de dados usando essas interfaces.
+A interfaces fornecida (`SerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
+A ideia é que você trate séries de dados relacionadas usando essas interfaces.
 
 Neste passo você deve definir quais séries de dados vai tratar.
-Você precisa definir necessariamente duas séries de dados que estejam de certa forma relacionados.
-Abaixo estão alguns exemplos, mas você pode escolher outros.
-Ao escolher valide com o professor, pois a ideia é cada aluno tenha temas diferentes.
+Você precisa definir necessariamente duas séries de dados que estejam de certa forma relacionadas.
+Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
+Ao escolher, valide com o professor, pois a ideia é cada aluno tenha temas diferentes.
 
-1. Dados de clima: temperatura e umidade relativa do ar.
-2. Dados de acidentes: fatais e não fatais
-3. Dados da balança comercial de um país: importações e exportações.
-4. Dados de ações de duas empresas: valores da ação da Vale e da Petrobrás.
+| Contexto ou tema  | Dois tipos de dados        | Periodicidade | Período Inicial | Período Final |
+| --------          | -----------------------    | ------------- | --------------- | ------------- |
+| Acidentes         | fatais e não fatais        | diária        |         1       |       30      |
+| Ações             | Vale e Petrobrás           | horária       |         8       |       18      |
+| Clima             | temperatura e umidade      | mensal        |         2       |       10      |
+| Vídeo Youtube     | visualizações e curtidas   | diária        |         5       |       12      |
+| Balança comercial | importações e exporatações | mensal        |         1       |       12      |
+| *.. sua resposta* | *.. sua resposta*          | *.. sua resposta* |  *.. sua resposta*   | *.. sua resposta* |
 
-Neste passo, você deve escrever abaixo quais são as séries de dados que você vai tratar e, em seguida, fazer commit com essa alteração.
-
-> ... digite aqui sua resposta ...
+Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em seguida, fazer commit com essa alteração.
 
 ## Passo 2 - Criação do Pacote
 
@@ -50,27 +52,28 @@ Crie, dentro do pacote do Passo 2, **uma classe para representar as suas séries
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
 A ideia é que ela seja usada depois para criar dois objetos para representar os dois tipos diferentes de dados de clima (temperatura e umidade relativa do ar, por exemplo).
 
-A classe deverá implementar a interface fornecida `SeriesDados`, sobrescrevendo todos os seus métodos.
+A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo todos os seus métodos.
+- **Atenção**: a interface `SerieDados` não pode ser alterada!
 
-O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
 - Lembre-se também de tratar o caso do método seja chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no de obter dado).
 
-Obs.: lembre-se que como a classe `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
+Obs.: lembre-se que como a interface `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
 
-Ao terminar, faça um commit.
+Ao terminar, faça um commit e sincronize as alterações.
 
-## Passo 4 - Classe de controle
+## Passo 4 - Classe de Regra de Negócio
 
-Crie, dentro do pacote do Passo 2, **uma classe de controle** que tenha dois atributos da classe de Séries de Dados que você criou no passo anterior.
+Crie, dentro do pacote do Passo 2, **uma classe de regra de negócio** que tenha dois atributos da classe de séries de dados que você criou no passo anterior.
 
-Na implementação da classe do construtor, crie os dados das suas séries diretamente no código (*hard coded*).
-Lembre-se que, além de criar os objetos das séries, é necessário adicionar os dados de cada série.
+Na implementação da classe, crie os dados das suas séries diretamente no código do construtor (*hard coded*).
+Lembre-se que, além de criar os objetos das séries, é necessário adicionar os dados de todos os períodos de cada série.
 
-> Obs: em um programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo.
-> Mas vamos fazer “na mão” para não gastar muito tempo.
+> Obs: claro que em um programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo.
+> Mas vamos fazer "na mão" para não gastar muito tempo.
 
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
 
@@ -84,7 +87,7 @@ Faça o commit de suas alterações.
 
 **Altere o código do método `executar` classe `Principal`** que foi fornecida neste projeto.
 
-Você deve instanciar a classe controladora, criada no passo anterior, e obter a lista de séries guardando em uma variável com o tipo `List<SerieDados>`.
+Você deve instanciar a classe de regra de negócio, criada no passo anterior, e obter a lista de séries guardando em uma variável com o tipo `List<SerieDados>`.
 
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
@@ -93,13 +96,13 @@ Dados da Serie Temperaturas em Lavras (DIARIA)
 Dia 5: 23
 Dia 6: 25
 ...
-Dados da Serie Umidade relativa do ar em Lavras (MENSAL)
-Mês 5: 76
-Mês 6: 82
+Dados da Serie Umidade relativa do ar em Lavras (DIARIA)
+Dia 5: 76
+Dia 6: 82
 ...
 ```
 
-Teste o seu programa e, estando tudo certo, faça um novo commit.
+Teste o seu programa e, estando tudo certo, faça um novo commit e sincronize as alterações.
 
 ## Passo 6 - Visualização dos dados
 
@@ -109,8 +112,8 @@ Em seguida, **chame o método `exibir`** do objeto criado.
 
 Teste seu programa e veja o que acontece.
 
-Obs.: a classe `VisualizadorSeries` utiliza bibliotecas que não fazem parte do Java Padrão.
-Elas se encontram na pasta `lib` desse projeto.
+Obs.: a classe `VisualizadorSeries` utiliza uma biblioteca (*JFreeChart*) que não fazem parte do Java Padrão.
+Os arquivos necessários para usar a biblioteca se encontram na pasta `lib` deste projeto.
 
 Advinha o que precisa fazer agora? Isso mesmo, um novo commit.
 
@@ -119,7 +122,7 @@ Advinha o que precisa fazer agora? Isso mesmo, um novo commit.
 Você chegou a **refletir sobre o que acabamos de fazer**?
 Se não, vamos pensar nisso agora respondendo às perguntas abaixo.
 
-1. Quando a classe de `VisualizadorSeries` foi implementada, quem a criou conhecia algum código que você desenvolveu?
+1. Quando a classe de `VisualizadorSeries` foi implementada, quem a criou conhecia algum código que você desenvolveu neste exercício?
 
 > ... digite aqui sua resposta ...
 
@@ -135,4 +138,4 @@ Se não, vamos pensar nisso agora respondendo às perguntas abaixo.
 
 > ... digite aqui sua resposta ...
 
-Ao terminar, faça um novo commit e sincronize suas alterações com o GitHub Classroom.
+Ao terminar, faça um novo commit e sincronize suas alterações no GitHub Classroom.
