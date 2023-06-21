@@ -6,7 +6,7 @@ Este projeto é um código inicial de um exercício usado para praticar os conce
 
 As atividades de hoje têm por objetivo exemplificar a importância do uso dos conceitos de **Classes Abstratas e Interfaces**.
 
-Este projeto tem um pasta (pacote) chamada `series` com duas interfaces, uma classe e um enumerável.
+Este projeto tem um pasta (pacote) chamada `series` com duas interfaces, uma classe e um enumerador.
 Uma série de dados tem uma periodicidade, um intervalo (dado por um período inicial e um final) e valores inteiros (dados) correspondentes a cada período.
 Séries de dados podem ser, por exemplo:
 
