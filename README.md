@@ -67,13 +67,13 @@ Ao terminar, faça um commit e sincronize as alterações.
 
 ## Passo 4 - Classe de Regra de Negócio
 
-Crie, dentro do pacote do Passo 2, **uma classe de regra de negócio** que tenha dois atributos da classe de séries de dados que você criou no passo anterior.
+Crie, dentro do pacote criado no Passo 2, **uma classe de regra de negócio** que tenha dois atributos da classe de séries de dados que você criou no passo anterior.
 
 Na implementação da classe, crie os dados das suas séries diretamente no código do construtor (*hard coded*).
 Lembre-se que, além de criar os objetos das séries, é necessário adicionar os dados de todos os períodos de cada série.
 
 > Obs: claro que em um programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo.
-> Mas vamos fazer "na mão" para não gastar muito tempo.
+> Mas vamos fazer "na mão" para não gastar muito tempo aqui.
 
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
 
@@ -87,7 +87,7 @@ Faça o commit de suas alterações.
 
 **Altere o código do método `executar` classe `Principal`** que foi fornecida neste projeto.
 
-Você deve instanciar a classe de regra de negócio, criada no passo anterior, e obter a lista de séries guardando em uma variável com o tipo `List<SerieDados>`.
+Você deve instanciar a classe de regra de negócio, criada no passo anterior, e obter a lista de séries guardando em uma variável de tipo `List<SerieDados>`.
 
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
@@ -112,7 +112,7 @@ Em seguida, **chame o método `exibir`** do objeto criado.
 
 Teste seu programa e veja o que acontece.
 
-Obs.: a classe `VisualizadorSeries` utiliza uma biblioteca (*JFreeChart*) que não fazem parte do Java Padrão.
+Obs.: a classe `VisualizadorSeries` utiliza uma biblioteca (*JFreeChart*) que não faz parte do Java Padrão.
 Os arquivos necessários para usar a biblioteca se encontram na pasta `lib` deste projeto.
 
 Advinha o que precisa fazer agora? Isso mesmo, um novo commit.
