@@ -13,13 +13,13 @@ Séries de dados podem ser, por exemplo:
 - Das temperaturas de uma cidade, do dia 1 ao dia 5, com periodicidade diária.
 - Das vendas de uma loja, do mês 4 ao mês 10, com periodicidade mensal.
 
-A interfaces fornecida (`SerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
-A ideia é que você trate séries de dados relacionadas usando essas interfaces.
+A interface fornecida (`SerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
+A ideia é que você trate séries de dados relacionadas usando essa interface.
 
 Neste passo você deve definir quais séries de dados vai tratar.
-Você precisa definir necessariamente duas séries de dados que estejam de certa forma relacionadas.
+Você precisa definir necessariamente duas séries de dados que estejam de certa forma correlacionadas.
 Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
-Ao escolher, valide com o professor, pois a ideia é cada aluno tenha temas diferentes.
+Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha temas diferentes.
 
 | Contexto ou tema  | Dois tipos de dados        | Periodicidade | Período Inicial | Período Final |
 | --------          | -----------------------    | ------------- | --------------- | ------------- |
@@ -30,7 +30,7 @@ Ao escolher, valide com o professor, pois a ideia é cada aluno tenha temas dife
 | Balança comercial | importações e exporatações | mensal        |         1       |       12      |
 | *.. sua resposta* | *.. sua resposta*          | *.. sua resposta* |  *.. sua resposta*   | *.. sua resposta* |
 
-Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em seguida, fazer commit com essa alteração.
+Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em seguida, fazer commit e sincronizar as alterações.
 
 ## Passo 2 - Criação do Pacote
 
@@ -43,11 +43,11 @@ Escolha um nome para o pacote que tenha relação com o tema que escolheu.
 
 Para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
 
-Obs: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
+> Obs: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
 
 ## Passo 3 - Criação de classe para série de dados
 
-Crie, dentro do pacote do Passo 2, **uma classe para representar as suas séries de dados**.
+Crie, dentro do pacote criado no Passo 2, **uma classe para representar as suas séries de dados**.
 
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
 A ideia é que ela seja usada depois para criar dois objetos para representar os dois tipos diferentes de dados de clima (temperatura e umidade relativa do ar, por exemplo).
@@ -59,7 +59,7 @@ O construtor da classe deverá receber por parâmetro a identificação da séri
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
-- Lembre-se também de tratar o caso do método seja chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no de obter dado).
+- Lembre-se também de tratar o caso do método ser chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no método de obter dado).
 
 Obs.: lembre-se que como a interface `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
 
