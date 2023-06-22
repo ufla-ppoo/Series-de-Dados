@@ -40,6 +40,7 @@ Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material di
 Crie um pacote para colocar as classes das suas séries de dados.
 As classes dos três passos seguintes devem pertencer a esse pacote.
 Escolha um nome para o pacote que tenha relação com o tema que escolheu.
+- *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
 
 Para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
 
@@ -50,7 +51,7 @@ Para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
 Crie, dentro do pacote criado no Passo 2, **uma classe para representar as suas séries de dados**.
 
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
-A ideia é que ela seja usada depois para criar dois objetos para representar os dois tipos diferentes de dados de clima (temperatura e umidade relativa do ar, por exemplo).
+A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (um para temperatura e outro para umidade relativa do ar, por exemplo).
 
 A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo todos os seus métodos.
 - **Atenção**: a interface `SerieDados` não pode ser alterada!
