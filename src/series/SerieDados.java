@@ -25,7 +25,7 @@ public interface SerieDados {
      * 
      * @return Nome ou identificação da série de dados
      */
-    String obterIdentificacaoSerie();
+    String obterIdentificacao();
     
     /**
      * Retorna o início do período para o qual a série tem dados. Exemplo: periodicidade diária

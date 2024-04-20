@@ -22,14 +22,14 @@ Você precisa definir necessariamente duas séries de dados que estejam de certa
 Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
 Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha tema diferente.
 
-| Contexto ou tema  | Dois tipos de dados        | Periodicidade | Período Inicial | Período Final |
-| --------          | -----------------------    | ------------- | --------------- | ------------- |
-| Acidentes         | fatais e não fatais        | diária        |         1       |       30      |
-| Ações             | Vale e Petrobrás           | horária       |         8       |       18      |
-| Clima             | temperatura e umidade      | mensal        |         2       |       10      |
-| Vídeo Youtube     | visualizações e curtidas   | diária        |         5       |       12      |
-| Balança comercial | importações e exporatações | mensal        |         1       |       12      |
-| *.. sua resposta* | *.. sua resposta*          | *.. sua resposta* |  *.. sua resposta*   | *.. sua resposta* |
+| Contexto ou tema  | Dois tipos de dados          | Periodicidade | Período Inicial | Período Final |
+| --------          | -----------------------      | ------------- | --------------- | ------------- |
+| Acidentes         | fatais e não fatais          | diária        |         1       |       30      |
+| Ações             | Vale e Petrobrás             | horária       |         8       |       18      |
+| Clima             | temperaturas de duas cidades | mensal        |         2       |       10      |
+| Vídeo Youtube     | visualizações e curtidas     | diária        |         5       |       12      |
+| Balança comercial | importações e exporatações   | mensal        |         1       |       12      |
+| *.. sua resposta* | *.. sua resposta*            | *.. sua resposta* |  *.. sua resposta*   | *.. sua resposta* |
 
 Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em seguida, fazer commit e sincronizar as alterações.
 
@@ -53,7 +53,7 @@ Escolha um nome para o pacote que tenha relação com o tema que escolheu.
 Crie, dentro do pacote criado no Passo 2, **uma classe para representar as suas séries de dados**.
 
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
-A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (um para temperatura e outro para umidade relativa do ar, por exemplo).
+A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (por exemplo: um para temperaturas de Lavras e outro para temperaturas de BH).
 
 A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo todos os seus métodos.
 
@@ -82,7 +82,7 @@ Lembre-se que, além de criar os objetos das séries, é necessário adicionar o
 
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
 
-> Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe `Controle`, o que feriria o encapsulamento.
+> Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe de regra de negócio, o que feriria o encapsulamento.
 
 > Dica 2: se usar a lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
 
@@ -97,13 +97,13 @@ Você deve instanciar a classe de regra de negócio, criada no passo anterior, e
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
 ```text
-Dados da Serie Temperaturas em Lavras (DIARIA)
-Dia 5: 23
-Dia 6: 25
+Dados da Serie Temperaturas de Lavras (DIARIA)
+Período 5: 23
+Período 6: 25
 ...
-Dados da Serie Umidade relativa do ar em Lavras (DIARIA)
-Dia 5: 76
-Dia 6: 82
+Dados da Serie Temperaturas de BH (DIARIA)
+Período 5: 76
+Período 6: 82
 ...
 ```
 

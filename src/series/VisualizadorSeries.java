@@ -42,7 +42,7 @@ public class VisualizadorSeries {
         JFreeChart graficoLinha = ChartFactory.createBarChart(
                 null,         // Título do gráfico
                 "Intervalo",  // Nome do eixo X
-                "Valor",      // Nome do eixo Y
+                "Períodos",   // Nome do eixo Y
                 criarDataset(series),     // método que cria os dados do gráfico
                 PlotOrientation.VERTICAL, // Orientação do gráfico
                 true,true,false);         // legenda, tooltips, urls
@@ -81,7 +81,7 @@ public class VisualizadorSeries {
          
                dataset.addValue(
                    serie.obterDado(periodo), 
-                   serie.obterIdentificacaoSerie(),
+                   serie.obterIdentificacao(),
                    Integer.toString(periodo));
            }
         }
