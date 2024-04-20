@@ -6,8 +6,8 @@ Este projeto é um código inicial de um exercício usado para praticar os conce
 
 As atividades de hoje têm por objetivo exemplificar a importância do uso dos conceitos de **Classes Abstratas e Interfaces**.
 
-Este projeto tem um pasta (pacote) chamada `series` com duas interfaces, uma classe e um enumerador.
-Uma série de dados tem uma periodicidade, um intervalo (dado por um período inicial e um final) e valores inteiros (dados) correspondentes a cada período.
+Este projeto tem um pasta (pacote) chamada `series` com uma interface, uma classe e um tipo enumerador.
+Uma série de dados tem uma periodicidade, um intervalo (dado por um período inicial e um final) e valores numéricos (dados) correspondentes a cada período.
 Séries de dados podem ser, por exemplo:
 
 - Das temperaturas de uma cidade, do dia 1 ao dia 5, com periodicidade diária.
@@ -17,9 +17,10 @@ A interface fornecida (`SerieDados`) é genérica e serve para qualquer tipo de 
 A ideia é que você trate séries de dados relacionadas usando essa interface.
 
 Neste passo você deve definir quais séries de dados vai tratar.
-Você precisa definir necessariamente duas séries de dados que estejam de certa forma correlacionadas.
+Você precisa definir necessariamente duas séries de dados que estejam de certa forma correlacionadas, porque a ideia é comparar os dados de uma série com a outra.
+
 Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
-Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha temas diferentes.
+Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha tema diferente.
 
 | Contexto ou tema  | Dois tipos de dados        | Periodicidade | Período Inicial | Período Final |
 | --------          | -----------------------    | ------------- | --------------- | ------------- |
@@ -35,14 +36,15 @@ Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em s
 ## Passo 2 - Criação do Pacote
 
 Este projeto utiliza o conceito de **Pacotes**.
-Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material disponibilizado na seção de Estudos Autônomos.
+Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material disponibilizado nos materiais complementares da disciplina.
 
-Crie um pacote para colocar as classes das suas séries de dados.
+- Em resumo, para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
+
+Crie então um pacote para colocar as classes das suas séries de dados.
 As classes dos três passos seguintes devem pertencer a esse pacote.
 Escolha um nome para o pacote que tenha relação com o tema que escolheu.
-- *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
 
-Para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
+- *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
 
 > Obs: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
 
@@ -54,11 +56,13 @@ No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosC
 A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (um para temperatura e outro para umidade relativa do ar, por exemplo).
 
 A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo todos os seus métodos.
+
 - **Atenção**: a interface `SerieDados` não pode ser alterada!
 
 O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
+
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
 - Lembre-se também de tratar o caso do método ser chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no método de obter dado).
 

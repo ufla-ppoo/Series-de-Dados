@@ -21,7 +21,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * da série. Obs: a janela é posicionada aleatoriamente na tela.
  * 
  * @author Julio César Alves
- * @version 2022-03-18
  */
 public class VisualizadorSeries {
     
@@ -36,21 +35,21 @@ public class VisualizadorSeries {
      */
     public VisualizadorSeries(List<SerieDados> series) {
         // cria a janela
-        janela = new ApplicationFrame("Visualizador Series Diarias");
+        janela = new ApplicationFrame("Visualizador de Séries");
         janela.setDefaultCloseOperation(ApplicationFrame.EXIT_ON_CLOSE);
         
         // cria o gráfico que contém os dados da série
         JFreeChart graficoLinha = ChartFactory.createBarChart(
-                null,     // Título do gráfico
-                "Intervalo",    // Nome do eixo X
-                "Valor",  // Nome do eixo Y
+                null,         // Título do gráfico
+                "Intervalo",  // Nome do eixo X
+                "Valor",      // Nome do eixo Y
                 criarDataset(series),     // método que cria os dados do gráfico
                 PlotOrientation.VERTICAL, // Orientação do gráfico
                 true,true,false);         // legenda, tooltips, urls
         
         // adiciona o gráfico na janela
         ChartPanel painelGrafico = new ChartPanel(graficoLinha);
-        painelGrafico.setPreferredSize(new Dimension(600, 400));        
+        painelGrafico.setPreferredSize(new Dimension(800, 600));
         janela.setContentPane(painelGrafico);      
         janela.pack();
         

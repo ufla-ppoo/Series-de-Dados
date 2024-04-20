@@ -1,8 +1,7 @@
 package series;
 
 /**
- * Enumerável que representa a periodicidade
- * de um determinado período
+ * Tipo enumerador que representa uma periodicidade
  */
 public enum Periodicidade {
     
