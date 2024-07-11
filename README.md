@@ -17,7 +17,7 @@ A interface fornecida (`SerieDados`) é genérica e serve para qualquer tipo de 
 A ideia é que você trate séries de dados relacionadas usando essa interface.
 
 Neste passo você deve definir quais séries de dados vai tratar.
-Você precisa definir necessariamente duas séries de dados que estejam de certa forma correlacionadas, porque a ideia é comparar os dados de uma série com a outra.
+Você precisa definir necessariamente um tema que tenha duas séries de dados que estejam de certa forma correlacionadas, porque a ideia é comparar os dados de uma série com a outra.
 
 Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
 Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha tema diferente.
