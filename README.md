@@ -1,6 +1,21 @@
 # Séries de Dados
 
-Este projeto é um código inicial de um exercício usado para praticar os conceitos de Classes Abstratas e Interfaces.
+Este projeto é um código inicial de um exercício usado para praticar os conceitos de **Classes Abstratas e Interfaces**.
+
+## Orientações Gerais
+
+- Você deve fazer um passo de cada vez, testá-lo, fazer o commit e enviar suas alterações.
+Somente depois disso é que você deve passar para o próximo passo.
+
+- **ATENÇÃO**: **desligue o GitHub Copilot para fazer o exercício!**
+  - Se você utilizá-lo você não estará realmente exercitando os conceitos aprendidos e
+    não terá o domínio adequado para desenvolver as habilidades necessárias para se tornar
+	um bom programador/desenvolvedor.
+  - Sem contar ainda a questão do plágio.
+  - Lembre-se que você pode (e deve) consultar os materiais da disciplina para fazer o exercício.
+
+- Esse arquivo README pode ser melhor visualizado no VS Code (com formatação adequada) 
+  abrindo-o no modo de visualização. Para isso, basta apertar Ctrl+Sfhit+V com ele aberto.
 
 ## Passo 1 - Contexto e Definição do Tema
 
@@ -14,24 +29,38 @@ Séries de dados podem ser, por exemplo:
 - Das vendas de uma loja, do mês 4 ao mês 10, com periodicidade mensal.
 
 A interface fornecida (`SerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
-A ideia é que você trate séries de dados relacionadas usando essa interface.
+A ideia é que você trate séries de dados relacionadas usando essa interface, escolhendo um dos temas da tabela abaixo.
 
-Neste passo você deve definir quais séries de dados vai tratar.
-Você precisa definir necessariamente um tema que tenha duas séries de dados que estejam de certa forma correlacionadas, porque a ideia é comparar os dados de uma série com a outra.
+Você deve então completar aqui o o nome do tema que você escolheu:
 
-Abaixo estão alguns exemplos, mas você pode (e deve) escolher outro, completando a tabela abaixo.
-Ao escolher, valide com o professor, pois a ideia é que cada aluno tenha tema diferente.
+> Digite sua resposta aqui substituindo esse texto pelo tema
 
-| Contexto ou tema  | Dois tipos de dados          | Periodicidade | Período Inicial | Período Final |
-| --------          | -----------------------      | ------------- | --------------- | ------------- |
-| Acidentes         | fatais e não fatais          | diária        |         1       |       30      |
-| Ações             | Vale e Petrobrás             | horária       |         8       |       18      |
-| Clima             | temperaturas de duas cidades | mensal        |         2       |       10      |
-| Vídeo Youtube     | visualizações e curtidas     | diária        |         5       |       12      |
-| Balança comercial | importações e exporatações   | mensal        |         1       |       12      |
-| *.. sua resposta* | *.. sua resposta*            | *.. sua resposta* |  *.. sua resposta*   | *.. sua resposta* |
-
-Neste passo, portanto, você deve preencher sua resposta na tabela acima e, em seguida, fazer commit e sincronizar as alterações.
+| Tema                | Dois tipos de dados              | Periodicidade | Período Inicial | Período Final |
+| ------------------- | -------------------------------- | ------------- | --------------- | ------------- |
+| Acidentes           | fatais e não fatais              | diária        |         1       |       30      |
+| Ações               | Vale e Petrobrás                 | horária       |         8       |       18      |
+| Clima               | temperaturas de duas cidades     | mensal        |         2       |       10      |
+| Vídeo Youtube       | visualizações e curtidas         | diária        |         5       |       12      |
+| Balança comercial   | importações e exporatações       | mensal        |         1       |       12      |
+| Consumo de energia  | residencial e comercial          | mensal        |         1       |       12      |
+| Produção agrícola   | soja e milho                     | anual         |      2015       |     2025      |
+| Tráfego de internet | downloads e uploads              | horária       |         0       |       23      |
+| Saúde pública       | casos de gripe e dengue          | semanal       |         1       |       52      |
+| Transporte público  | passageiros e viagens            | diária        |         1       |       30      |
+| Mercado imobiliário | vendas e aluguéis                | mensal        |         1       |       12      |
+| Educação            | matrículas e evasões             | anual         |      2010       |     2020      |
+| Poluição do ar      | CO2 e partículas finas           | diária        |         1       |       31      |
+| Comércio eletrônico | pedidos e devoluções             | semanal       |         1       |       52      |
+| Produção industrial | automóveis e motocicletas        | mensal        |         1       |       12      |
+| Turismo             | turistas nacionais e estrangeiros| mensal        |         1       |       12      |
+| Esportes            | gols e assistências              | semanal       |         1       |       38      |
+| Mercado financeiro  | ações e títulos                  | diária        |         1       |       30      |
+| Agricultura urbana  | hortaliças e frutas              | mensal        |         1       |       12      |
+| Segurança pública   | roubos e furtos                  | diária        |         1       |       30      |
+| Produção de energia | solar e eólica                   | mensal        |         1       |       12      |
+| Mobilidade urbana   | carros e bicicletas              | horária       |         6       |       22      |
+| Saúde mental        | consultas e internações          | mensal        |         1       |       12      |
+| Eventos culturais   | quantidade e ingressos vendidos  | semanal       |         1       |       52      |
 
 ## Passo 2 - Criação do Pacote
 
