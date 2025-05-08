@@ -65,9 +65,10 @@ Você deve então completar aqui o o nome do tema que você escolheu:
 ## Passo 2 - Criação do Pacote
 
 Este projeto utiliza o conceito de **Pacotes**.
-Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material disponibilizado nos materiais complementares da disciplina.
+Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material complementar sobre isso disponibilizado no Campus Virtual.
 
 - Em resumo, para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
+- Você verá que os arquivos criados dentro dessa nova pasta terão a palavra-chave `package` na primeira linha, indicando que a classe do arquivo pertence a esse pacote.
 
 Crie então um pacote para colocar as classes das suas séries de dados.
 As classes dos três passos seguintes devem pertencer a esse pacote.
@@ -75,11 +76,13 @@ Escolha um nome para o pacote que tenha relação com o tema que escolheu.
 
 - *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
 
-> Obs: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
+> Obs. 1: não é possível fazer commit nesse passo porque o Git não faz commit de pastas vazias.
+
+> Obs. 2: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
 
 ## Passo 3 - Criação de classe para série de dados
 
-Crie, dentro do pacote criado no Passo 2, **uma classe para representar as suas séries de dados**.
+Crie uma classe para representar as suas séries de dados, dentro do pacote criado no passo anterior. 
 
 No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
 A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (por exemplo: um para temperaturas de Lavras e outro para temperaturas de BH).
@@ -89,13 +92,16 @@ A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo 
 - **Atenção**: a interface `SerieDados` não pode ser alterada!
 
 O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
+Avalie qual é o melhor tipo de coleção a ser usado para facilitar a implementação dos métodos da classe.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
 
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
 - Lembre-se também de tratar o caso do método ser chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no método de obter dado).
 
-Obs.: lembre-se que como a interface `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
+> Obs.: lembre-se que como a interface `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
+
+> Dica: o atributo periodicidade deve ser do tipo do enumerador `Periodicidade`. Para entender o que são tipos enumeradores, sugiro que leia [este artigo](https://www.devmedia.com.br/enumeracoes-em-java/25839).
 
 Ao terminar, faça um commit e sincronize as alterações.
 
