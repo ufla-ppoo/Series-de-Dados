@@ -65,7 +65,7 @@ Você deve então completar aqui o o nome do tema que você escolheu:
 ## Passo 2 - Criação do Pacote
 
 Este projeto utiliza o conceito de **Pacotes**.
-Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material complementar sobre isso disponibilizado no Campus Virtual.
+Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material complementar sobre isso disponibilizado no Campus Virtual (ou [neste link](https://docs.google.com/presentation/d/1D65XwzbNrn0VQJpGSJvPToCobUR5fj0xbGmWt-Vv6V4/edit?usp=sharing)).
 
 - Em resumo, para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
 - Você verá que os arquivos criados dentro dessa nova pasta terão a palavra-chave `package` na primeira linha, indicando que a classe do arquivo pertence a esse pacote.
@@ -117,9 +117,9 @@ Lembre-se que, além de criar os objetos das séries, é necessário adicionar o
 
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
 
-> Dica 1: os elementos da lista devem ser do tipo `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe de regra de negócio, o que feriria o encapsulamento.
+> Dica 1: os elementos da lista devem ser do tipo da interface `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe de regra de negócio, o que feriria o encapsulamento.
 
-> Dica 2: se usar a lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
+> Dica 2: se preferir usar uma lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
 
 Faça o commit de suas alterações.
 
