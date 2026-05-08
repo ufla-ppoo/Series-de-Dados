@@ -41,8 +41,8 @@ public class VisualizadorSeries {
         // cria o gráfico que contém os dados da série
         JFreeChart graficoLinha = ChartFactory.createBarChart(
                 null,         // Título do gráfico
-                "Intervalo",  // Nome do eixo X
-                "Períodos",   // Nome do eixo Y
+                "Períodos",   // Nome do eixo X
+                "Valores",    // Nome do eixo Y
                 criarDataset(series),     // método que cria os dados do gráfico
                 PlotOrientation.VERTICAL, // Orientação do gráfico
                 true,true,false);         // legenda, tooltips, urls
