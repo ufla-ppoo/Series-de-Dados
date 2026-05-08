@@ -33,7 +33,7 @@ public class VisualizadorSeries {
      * 
      * @param series A lista de séries de dados que terão seus dados exibidos em um gráfico
      */
-    public VisualizadorSeries(List<SerieDados> series) {
+    public VisualizadorSeries(List<ISerieDados> series) {
         // cria a janela
         janela = new ApplicationFrame("Visualizador de Séries");
         janela.setDefaultCloseOperation(ApplicationFrame.EXIT_ON_CLOSE);
@@ -71,11 +71,11 @@ public class VisualizadorSeries {
      * @param series Lista com as séries de dados que serão exibidas no gráfico.
      * @return Retorna o conjunto de dados (dataset) do gráfico.
      */
-    private DefaultCategoryDataset criarDataset(List<SerieDados> series) {
+    private DefaultCategoryDataset criarDataset(List<ISerieDados> series) {
        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
     
        // Para cada série de dados
-       for (SerieDados serie : series) {
+       for (ISerieDados serie : series) {
            // para cada dia do gráfico adiciona um valor no conjunto de dados       
            for(int periodo = serie.obterInicioPeriodo(); periodo <= serie.obterFimPeriodo(); periodo++) {      
          

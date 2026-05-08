@@ -18,7 +18,7 @@ package series;
  * 
  * @author Julio César Alves
  */
-public interface SerieDados {
+public interface ISerieDados {
     /**
      * Retorna uma string que representa o nome ou a identificação da série de
      * dados em questão.
@@ -29,30 +29,30 @@ public interface SerieDados {
     
     /**
      * Retorna o início do período para o qual a série tem dados. Exemplo: periodicidade diária
-     * com valor inicial 5. Considera-se que a série tem dados para todos os dias desde o valor inicial
-     * do período até o valor final.
+     * com período inicial 5. Considera-se que a série terá dados para todos os dias desde o dia 5
+     * até o período final.
      * 
-     * @return O primeiro valor que possui dados.
+     * @return O primeiro período que possui dados.
      */
     int obterInicioPeriodo();
     
     /**
-     * Retorna o último valor para o qual a série tem dados. Exemplo: periodicidade diária
-     * com valor final 21. Considera-se que a série tem dados para todos os dias desde o valor inicial
-     * do período até o valor final.
+     * Retorna o fim do período para o qual a série tem dados. Exemplo: periodicidade diária
+     * com período final 21. Considera-se que a série tem dados para todos os dias desde o período 
+     * inicial até o dia 21.
      * 
-     * @return O último valor que possui dados.
+     * @return O último período que possui dados.
      */
     int obterFimPeriodo();
 
     /**
-     * Retorna o período em que a série está vínculada
-     * @return A períodicidade do intervalo
+     * Retorna a periocidade dos dados da série (ex.: diaria, mensal, etc.)
+     * @return A periodicidade do intervalo
      */
     Periodicidade obterPeriodicidade();
     
     /**
-     * Retorna o dado correspondente a um valor da série de dados.
+     * Retorna o dado correspondente a um período da série de dados.
      * 
      * Obs: seria mais eficiente o retorno de um conjunto de dados, mas está
      * assim por motivos didáticos.

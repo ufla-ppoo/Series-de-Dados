@@ -17,7 +17,7 @@ Somente depois disso é que você deve passar para o próximo passo.
 - Esse arquivo README pode ser melhor visualizado no VS Code (com formatação adequada) 
   abrindo-o no modo de visualização. Para isso, basta apertar Ctrl+Sfhit+V com ele aberto.
 
-## Passo 1 - Contexto e Definição do Tema
+## Passo 1 - Contexto e Classe para Séries de dados
 
 As atividades de hoje têm por objetivo exemplificar a importância do uso dos conceitos de **Classes Abstratas e Interfaces**.
 
@@ -25,22 +25,18 @@ Este projeto tem um pasta (pacote) chamada `series` com uma interface, uma class
 Uma série de dados tem uma periodicidade, um intervalo (dado por um período inicial e um final) e valores numéricos (dados) correspondentes a cada período.
 Séries de dados podem ser, por exemplo:
 
-- Das temperaturas de uma cidade, do dia 1 ao dia 5, com periodicidade diária.
-- Das vendas de uma loja, do mês 4 ao mês 10, com periodicidade mensal.
+- Das temperaturas de uma cidade, com periodicidade diária, do dia 1 ao dia 30.
+- Das vendas de uma loja, com periodicidade mensal, do mês 1 ao mês 12.
 
-A interface fornecida (`SerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
-A ideia é que você trate séries de dados relacionadas usando essa interface, escolhendo um dos temas da tabela abaixo.
-
-Você deve então completar aqui o o nome do tema que você escolheu:
-
-> Digite sua resposta aqui substituindo esse texto pelo tema
+A interface fornecida (`ISerieDados`) é genérica e serve para qualquer tipo de série de dados para um determinado período.
+A tabela abaixo apresenta outros possíveis exemplos de séries de dados.
 
 | Tema                | Dois tipos de dados              | Periodicidade | Período Inicial | Período Final |
 | ------------------- | -------------------------------- | ------------- | --------------- | ------------- |
 | Acidentes           | fatais e não fatais              | diária        |         1       |       30      |
 | Ações               | Vale e Petrobrás                 | horária       |         8       |       18      |
-| Clima               | temperaturas de duas cidades     | mensal        |         2       |       10      |
-| Vídeo Youtube       | visualizações e curtidas         | diária        |         5       |       12      |
+| Clima               | temperaturas de duas cidades     | diária        |         1       |       30      |
+| Vídeo Youtube       | visualizações e curtidas         | diária        |         1       |       30      |
 | Balança comercial   | importações e exporatações       | mensal        |         1       |       12      |
 | Consumo de energia  | residencial e comercial          | mensal        |         1       |       12      |
 | Produção agrícola   | soja e milho                     | anual         |      2015       |     2025      |
@@ -48,8 +44,8 @@ Você deve então completar aqui o o nome do tema que você escolheu:
 | Saúde pública       | casos de gripe e dengue          | semanal       |         1       |       52      |
 | Transporte público  | passageiros e viagens            | diária        |         1       |       30      |
 | Mercado imobiliário | vendas e aluguéis                | mensal        |         1       |       12      |
-| Educação            | matrículas e evasões             | anual         |      2010       |     2020      |
-| Poluição do ar      | CO2 e partículas finas           | diária        |         1       |       31      |
+| Educação            | matrículas e evasões             | anual         |      2015       |     2025      |
+| Poluição do ar      | CO2 e partículas finas           | diária        |         1       |       30      |
 | Comércio eletrônico | pedidos e devoluções             | semanal       |         1       |       52      |
 | Produção industrial | automóveis e motocicletas        | mensal        |         1       |       12      |
 | Turismo             | turistas nacionais e estrangeiros| mensal        |         1       |       12      |
@@ -62,36 +58,14 @@ Você deve então completar aqui o o nome do tema que você escolheu:
 | Saúde mental        | consultas e internações          | mensal        |         1       |       12      |
 | Eventos culturais   | quantidade e ingressos vendidos  | semanal       |         1       |       52      |
 
-## Passo 2 - Criação do Pacote
+Neste passo você deve criar uma classe que possa representar qualquer uma das séries de dados apresentadas.
+A classe deverá implementar a interface fornecida `ISerieDados`, sobrescrevendo todos os seus métodos, e
+deve ser colocada no mesmo pacote.
 
-Este projeto utiliza o conceito de **Pacotes**.
-Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material complementar sobre isso disponibilizado no Campus Virtual (ou [neste link](https://docs.google.com/presentation/d/1D65XwzbNrn0VQJpGSJvPToCobUR5fj0xbGmWt-Vv6V4/edit?usp=sharing)).
+- **Atenção**: a interface `ISerieDados` não pode ser alterada!
 
-- Em resumo, para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
-- Você verá que os arquivos criados dentro dessa nova pasta terão a palavra-chave `package` na primeira linha, indicando que a classe do arquivo pertence a esse pacote.
-
-Crie então um pacote para colocar as classes das suas séries de dados.
-As classes dos três passos seguintes devem pertencer a esse pacote.
-Escolha um nome para o pacote que tenha relação com o tema que escolheu.
-
-- *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
-
-> Obs. 1: não é possível fazer commit nesse passo porque o Git não faz commit de pastas vazias.
-
-> Obs. 2: para facilitar o entendimento, os passos seguintes citarão séries de dados de clima, lembre-se de adaptar as instruções para o seu tema escolhido.
-
-## Passo 3 - Criação de classe para série de dados
-
-Crie uma classe para representar as suas séries de dados, dentro do pacote criado no passo anterior. 
-
-No caso dos dados de clima, por exemplo, a classe poderia se chamar `SerieDadosClima`.
-A ideia é que depois sejam criados dois objetos dessa classe para representar as duas diferentes séries de dados (por exemplo: um para temperaturas de Lavras e outro para temperaturas de BH).
-
-A classe deverá implementar a interface fornecida `SerieDados`, sobrescrevendo todos os seus métodos.
-
-- **Atenção**: a interface `SerieDados` não pode ser alterada!
-
-O construtor da classe deverá receber por parâmetro a identificação da série (o tema), o período inicial e o período final, bem como sua periodicidade e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série (tema), sua periodicidade,
+o período inicial e o período final, e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
 Avalie qual é o melhor tipo de coleção a ser usado para facilitar a implementação dos métodos da classe.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
@@ -99,15 +73,69 @@ Por fim, a classe deverá ter um método para adicionar um dado para um determin
 - Lembre-se que os dados podem ser informados em qualquer ordem (já que o método é chamado para cada período).
 - Lembre-se também de tratar o caso do método ser chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no método de obter dado).
 
-> Obs.: lembre-se que como a interface `SerieDados` está em outro pacote, você precisará importá-la usando: `import series.SerieDados`;
+Veja o exemplo da tabela abaixo para entender melhor o que deve ser implementado.
+Repare cada objeto que representa uma série de dados servirá, basicamente, para guardar 
+os dados de uma coluna de uma tabela como essa.
+
+| Período | Temperaturas de Lavras | Temperaturas de BH |
+| ------- | ---------------------- | ------------------ |
+|    1    |   25                   |    31              |
+|    2    |   27                   |    29              |
+|    3    |   24                   |    28              |
+|   ...   |   ...                  |    ...             |
+|   30    |   22                   |    26              |
 
 > Dica: o atributo periodicidade deve ser do tipo do enumerador `Periodicidade`. Para entender o que são tipos enumeradores, sugiro que leia [este artigo](https://www.devmedia.com.br/enumeracoes-em-java/25839).
 
 Ao terminar, faça um commit e sincronize as alterações.
 
+## Passo 2 - Escolha do Tema e Criação do Pacote
+
+Nos próximos passos você deve tratar duas séries de dados relacionadas, escolhendo um dos temas da tabela 
+apresentada no passo anterior.
+
+Complete abaixo o nome do tema que você escolheu:
+
+> Digite sua resposta aqui substituindo esse texto pelo tema
+
+Como mencionado no passo anterior, este projeto utiliza o conceito de **Pacotes**.
+Para saber mais sobre o uso de Pacotes em Java, você pode acessar o material complementar sobre isso disponibilizado no Campus Virtual (ou [neste link](https://docs.google.com/presentation/d/1D65XwzbNrn0VQJpGSJvPToCobUR5fj0xbGmWt-Vv6V4/edit?usp=sharing)).
+
+- Em resumo, para criar um pacote no VS Code, basta criar uma pasta dentro da pasta `src`.
+- Você verá que os arquivos criados dentro dessa nova pasta terão a palavra-chave `package` na primeira linha, indicando que a classe do arquivo pertence a esse pacote.
+
+Crie então um pacote para colocar as classes relacionadas ao tema escolhido, que serão criadas nos
+próximos passos.
+Escolha um nome para o pacote que tenha relação com o tema que escolheu.
+
+- *Atenção*: por convenção, em Java os nomes dos pacotes começam com letra minúscula.
+
+Faça um commit e sincronize as alterações.
+
+## Passo 3 - Criação de subclasse para séries de dados de tema específico
+
+Crie uma subclasse para representar as séries de dados do tema que você escolheu.
+Ela deve ser colocada dentro do pacote criado no passo anterior. 
+
+Se o tema fosse dados de clima, por exemplo, a subclasse poderia se chamar `SerieDadosClima`.
+A ideia é que depois sejam criados dois objetos dessa classe para representar as duas 
+diferentes séries de dados do tema escolhido (por exemplo: um para temperaturas de Lavras 
+e outro para temperaturas de BH).
+
+O construtor da subclasse deve receber apenas uma identificação da série (por exemplo, 
+"Temperaturas de Lavras").
+A periodicidade, o período inicial e o período final, serão pré-definidos pela própria 
+classe, de acordo com o tema escolhido (veja tabela do Passo 1).
+
+> Obs.: lembre-se que a classe que você criou no Passo 1 está em outro pacote, você 
+> precisará importá-la usando: `import series.NomeDaClasse;`.
+
+Ao terminar, faça um commit e sincronize as alterações.
+
 ## Passo 4 - Classe de Regra de Negócio
 
-Crie, dentro do pacote criado no Passo 2, **uma classe de regra de negócio** que tenha dois atributos da classe de séries de dados que você criou no passo anterior.
+Crie, dentro do pacote criado no Passo 2, **uma classe de regra de negócio** que 
+tenha dois atributos da subclasse de séries de dados que você criou no passo 3.
 
 Na implementação da classe, crie os dados das suas séries diretamente no código do construtor (*hard coded*).
 Lembre-se que, além de criar os objetos das séries, é necessário adicionar os dados de todos os períodos de cada série.
@@ -115,11 +143,17 @@ Lembre-se que, além de criar os objetos das séries, é necessário adicionar o
 > Obs: claro que em um programa normal poderíamos ter um menu para o usuário informar os dados ou poderíamos obter essas informações de um arquivo.
 > Mas vamos fazer "na mão" para não gastar muito tempo aqui.
 
+> Dica 1: para facilitar você pode fazer um loop e utilizar um objeto da classe Random 
+> para gerar os dados de cada período, ao invés de ter que digitar um por um.
+
 Por fim, crie um método que retorna uma lista com as duas séries criadas.
 
-> Dica 1: os elementos da lista devem ser do tipo da interface `SerieDados`, pois, se não forem, seria possível alterar as séries fora da classe de regra de negócio, o que feriria o encapsulamento.
+> Dica 2: para respeitar o encapsulamento, os elementos da lista devem ser do tipo 
+> da interface `ISerieDados`, pois, se não forem, seria possível alterar as séries fora 
+> da classe de regra de negócio.
 
-> Dica 2: se preferir usar uma lista como atributo da classe (em vez de ter dois atributos, uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
+> Dica 3: se preferir usar uma lista como atributo da classe (em vez de ter dois atributos, 
+> uma para cada série), lembre-se que ela deve ser retornada como uma coleção imutável.
 
 Faça o commit de suas alterações.
 
@@ -127,18 +161,19 @@ Faça o commit de suas alterações.
 
 **Altere o código do método `executar` classe `Principal`** que foi fornecida neste projeto.
 
-Você deve instanciar a classe de regra de negócio, criada no passo anterior, e obter a lista de séries guardando em uma variável de tipo `List<SerieDados>`.
+Você deve instanciar a classe de regra de negócio, criada no passo anterior, e obter a lista 
+de séries guardando em uma variável de tipo `List<ISerieDados>`.
 
 Para testar se está tudo certo, implemente um loop que mostre os dados das séries conforme o exemplo abaixo:
 
 ```text
 Dados da Serie Temperaturas de Lavras (DIARIA)
-Período 5: 23
-Período 6: 25
+Dia 1: 23
+Dia 2: 25
 ...
 Dados da Serie Temperaturas de BH (DIARIA)
-Período 5: 76
-Período 6: 82
+Dia 1: 76
+Dia 2: 82
 ...
 ```
 
@@ -178,4 +213,4 @@ Se não, vamos pensar nisso agora respondendo às perguntas abaixo.
 
 > ... digite aqui sua resposta ...
 
-Ao terminar, faça um novo commit e sincronize suas alterações no GitHub Classroom.
+Ao terminar, faça um novo commit e sincronize suas alterações.
