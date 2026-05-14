@@ -64,8 +64,9 @@ deve ser colocada no mesmo pacote.
 
 - **Atenção**: a interface `ISerieDados` não pode ser alterada!
 
-O construtor da classe deverá receber por parâmetro a identificação da série (tema), sua periodicidade,
-o período inicial e o período final, e deve criar uma estrutura de dados (coleção) que guardará os dados da série.
+O construtor da classe deverá receber por parâmetro a identificação da série (ex.: "Temperaturas de Lavras"), 
+sua periodicidade, o período inicial e o período final, e deve criar uma estrutura de dados (coleção) que 
+guardará os dados da série.
 Avalie qual é o melhor tipo de coleção a ser usado para facilitar a implementação dos métodos da classe.
 
 Por fim, a classe deverá ter um método para adicionar um dado para um determinado período.
@@ -74,8 +75,8 @@ Por fim, a classe deverá ter um método para adicionar um dado para um determin
 - Lembre-se também de tratar o caso do método ser chamado para um período fora do intervalo de periodicidade definido para a série no construtor (neste método e também no método de obter dado).
 
 Veja o exemplo da tabela abaixo para entender melhor o que deve ser implementado.
-Repare cada objeto que representa uma série de dados servirá, basicamente, para guardar 
-os dados de uma coluna de uma tabela como essa.
+Repare **cada objeto da classe** que você está criando **servirá**, basicamente, **para guardar 
+os dados de uma coluna** de uma tabela como essa.
 
 | Período | Temperaturas de Lavras | Temperaturas de BH |
 | ------- | ---------------------- | ------------------ |
